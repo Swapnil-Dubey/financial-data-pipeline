@@ -1,0 +1,13 @@
+# Data fetching
+requests==2.31.0
+yfinance==0.2.33
+
+# Data manipulation
+pandas>=2.2.0
+numpy>=1.26.2
+
+# Environment management
+python-dotenv==1.0.0
+
+# Logging
+loguru==0.7.2
