@@ -10,4 +10,10 @@ numpy>=1.26.2
 python-dotenv==1.0.0
 
 # Logging
-loguru==0.7.2
+loguru==0.7.2pyspark==3.5.0
+
+google-cloud-bigquery 
+google-cloud-bigquery-storage 
+pyarrow
+pandas-gbq
+dbt-bigquery
