@@ -1,6 +1,6 @@
 # Financial Data Pipeline
 
-End-to-end data engineering pipeline that ingests stock market data, processes it at scale, loads it into a cloud warehouse, and runs on an automated schedule — fully containerized with Docker.
+End-to-end data engineering pipeline that ingests stock market data, processes it at scale, loads it into a cloud warehouse, and runs on an automated schedule - fully containerized with Docker.
 
 ![Airflow Success](docs/airflow_success.png)
 
@@ -8,7 +8,7 @@ End-to-end data engineering pipeline that ingests stock market data, processes i
 
 ## What It Does
 
-Pulls 2 years of daily OHLCV data for AAPL, MSFT, GOOGL, AMZN, and TSLA. Cleans and validates it with PySpark. Loads it into BigQuery. Transforms it with dbt. Runs the whole thing automatically on a weekday schedule via Airflow — all inside Docker containers.
+Pulls 2 years of daily OHLCV data for AAPL, MSFT, GOOGL, AMZN, and TSLA. Cleans and validates it with PySpark. Loads it into BigQuery. Transforms it with dbt. Runs the whole thing automatically on a weekday schedule via Airflow - all inside Docker containers.
 
 ```
 Yahoo Finance API
@@ -79,7 +79,7 @@ financial-data-pipeline/
 
 ## Data Quality
 
-The pipeline fails fast on bad data — if any check fails, downstream tasks don't run:
+The pipeline fails fast on bad data - if any check fails, downstream tasks don't run:
 
 - Null checks on all key columns
 - Negative price detection (physically impossible)
