@@ -71,7 +71,7 @@ def create_fact_table(client):
         ROUND(daily_return, 4) AS daily_return,
         ROUND(price_range, 4) AS price_range,
         ingestion_timestamp
-    FROM `{table_ref}.stg_stock_prices`
+    FROM `{table_ref}.raw_stock_prices`
     WHERE Date IS NOT NULL
         AND Close IS NOT NULL
         AND Volume > 0
@@ -112,7 +112,7 @@ def create_aggregate_table(client):
 if __name__ == "__main__":
     client = create_bigquery_client()
     create_dataset(client)
-    load_parquet_to_bigquery(client, "stg_stock_prices")
+    load_parquet_to_bigquery(client, "raw_stock_prices")
     create_fact_table(client)
     create_aggregate_table(client)
 
