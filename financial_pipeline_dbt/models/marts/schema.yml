@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_stock_prices
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: ticker
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
+      - name: close
+        tests:
+          - not_null
+      - name: volume
+        tests:
+          - not_null
+
+  - name: agg_stock_prices
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+          - unique

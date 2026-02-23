@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: financial_pipeline
+    database: financial-data-pipeline-488207
+    schema: financial_pipeline
+    tables:
+      - name: raw_stock_prices
