@@ -102,7 +102,7 @@ cd financial-data-pipeline
 **2. Authenticate with Google Cloud**
 ```bash
 gcloud auth application-default login
-gcloud auth application-default set-quota-project YOUR_PROJECT_ID
+gcloud auth application-default set-quota-project financial-data-pipeline-488207
 ```
 
 **3. Configure dbt**
@@ -114,7 +114,7 @@ financial_pipeline_dbt:
     dev:
       type: bigquery
       method: oauth
-      project: YOUR_PROJECT_ID
+      project: financial-data-pipeline-488207
       dataset: financial_pipeline
       threads: 1
       timeout_seconds: 300
